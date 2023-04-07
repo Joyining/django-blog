@@ -104,12 +104,7 @@
             <div class="media-wrap entry__media">
               <div class="entry__post-thumb">
                 <img
-                  src="{% static 'images/thumbs/standard/standard-1000.jpg' %}"
-                  srcset="
-                    {% static 'images/thumbs/standard/standard-2000.jpg' %} 2000w,
-                    {% static 'images/thumbs/standard/standard-1000.jpg' %} 1000w,
-                    {% static 'images/thumbs/standard/standard-500.jpg' %}   500w
-                  "
+                  src="/media/{{ post.thumbnail }}"
                   sizes="(max-width: 2000px) 100vw, 2000px"
                   alt=""
                 />
@@ -127,17 +122,6 @@
 
             <div class="entry__content">
               <p>{{ post.body }}</p>
-
-              <p class="entry__tags">
-                <span>Post Tags</span>
-
-                <span class="entry__tag-list">
-                  <a href="#0">orci</a>
-                  <a href="#0">lectus</a>
-                  <a href="#0">varius</a>
-                  <a href="#0">turpis</a>
-                </span>
-              </p>
             </div>
             <!-- end entry content -->
 

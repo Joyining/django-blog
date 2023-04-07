@@ -109,8 +109,7 @@
               <div class="entry__thumb">
                 <a href={% url 'posts' post.id %} class="entry__thumb-link">
                   <img
-                    src="{% static 'images/thumbs/masonry/woodcraft-600.jpg' %}"
-                    srcset="{% static 'images/thumbs/masonry/woodcraft-600.jpg' %} 1x, {% static 'images/thumbs/masonry/woodcraft-1200.jpg' %} 2x"
+                    src="/media/{{ post.thumbnail }}"
                     alt=""
                   />
                 </a>
