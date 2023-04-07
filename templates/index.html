@@ -127,7 +127,7 @@
                   </div>
                 </div>
                 <div class="entry__excerpt">
-                  <p>{{ post.body }}</p>
+                  <p>{{ post.body|truncatewords:20 }}</p>
                 </div>
               </div>
             </article>
