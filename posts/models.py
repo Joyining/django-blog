@@ -11,5 +11,20 @@ class Post(models.Model):
     created_at = models.DateTimeField(default=datetime.now, blank=True)
     thumbnail = models.ImageField(upload_to='uploads', default='')
 
+    GENERAL = 0
+    DEV_OPS = 1
+    WEB3 = 2
+    LIFE = 3
+    CATEGORY_CHOICES = [
+        (GENERAL, 'General'),
+        (DEV_OPS, 'DevOps'),
+        (WEB3, 'Web3'),
+        (LIFE, 'Life'),
+    ]
+    category = models.IntegerField(
+        choices=CATEGORY_CHOICES,
+        default=GENERAL,
+    )
+
     def __str__(self):
         return self.title
